@@ -13,13 +13,6 @@ else
   nvim -c PlugInstall -c quitall
 fi
 
-# Vim
-if [ -e "$HOME/.vim/autoload/plug.vim" ]; then
-  echo "vim plug exists for vim, skipping ..."
-else
-  curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-fi
-
 # Allow CTRL-H mapping to work in neovim
 # https://github.com/neovim/neovim/wiki/Troubleshooting#my-ctrl-h-mapping-doesnt-work
 infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti

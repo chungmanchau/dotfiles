@@ -1,8 +1,3 @@
-log() {
-  local fmt="$1"; shift
-  printf "\n\e[94m$fmt\n" "$@"
-}
-
 node_install_version=8.9.0
 
 log "Installing nvm ..."
@@ -17,29 +12,19 @@ else
   log "nvm already installed ..."
 fi
 
-npm_packages="$(npm list -g --depth=0)"
-install_global_npm_package() {
-  if echo $npm_packages | grep $1@ > /dev/null 2>&1; then
-    log "Already have %s installed. Skipping ..." "$1"
-  else
-    log "Installing %s ..." "$1"
-    npm i -g "$@" --quiet
-  fi
-}
-
 log "Installing npm global packages ..."
 
-install_global_npm_package diff-so-fancy
-install_global_npm_package eslint
-install_global_npm_package flow-vim-quickfix
-install_global_npm_package gulp
-install_global_npm_package http-server
-install_global_npm_package imageoptim-cli
-install_global_npm_package json-to-js
-install_global_npm_package nodemon
-install_global_npm_package npm-check
-install_global_npm_package npmlist
-install_global_npm_package tern
+npm i -g diff-so-fancy
+npm i -g eslint
+npm i -g flow-vim-quickfix
+npm i -g gulp
+npm i -g http-server
+npm i -g imageoptim-cli
+npm i -g json-to-js
+npm i -g nodemon
+npm i -g npm-check
+npm i -g npmlist
+npm i -g tern
 
 log "Installing yarn ..."
 
