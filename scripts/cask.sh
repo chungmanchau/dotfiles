@@ -37,6 +37,7 @@ install_cask iina
 
 # Development
 install_cask atom
+install_cask intellij-idea
 install_cask gitify
 install_cask iterm2-nightly
 install_cask java
