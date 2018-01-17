@@ -20,7 +20,6 @@ brew tap caskroom/versions
 # Browsers
 install_cask firefox
 install_cask google-chrome-beta
-install_cask torbrowser
 
 # Cloud
 install_cask cloud
@@ -32,10 +31,7 @@ install_cask google-hangouts
 install_cask skype
 
 # Media
-install_cask burn
 install_cask imageoptim
-install_cask max
-install_cask sonos
 install_cask spotify
 install_cask iina
 
